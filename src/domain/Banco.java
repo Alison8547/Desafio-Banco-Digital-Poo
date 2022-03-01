@@ -1,7 +1,10 @@
 package domain;
 
+import java.util.List;
+
 public class Banco {
     private String nome;
+    private List<Cliente> clientes;
 
     public String getNome() {
         return nome;
@@ -9,5 +12,19 @@ public class Banco {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
+    }
+
+    public void listaClientes(){
+        for (Cliente clienteList : clientes){
+            System.out.println(clienteList.getNome());
+        }
     }
 }
